@@ -1,0 +1,29 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+
+.chef{
+    @include centerAll;
+     &__wrapper{
+             @include evenGrid(4, 2fr);     
+        gap:2rem
+     }
+        img{
+            width: 35rem;
+            border-radius: 5%;
+        }
+        h2{
+            padding-top: 4rem;
+        }
+
+        h4{
+            color: $clr--light;
+            font-size: 1.5rem;
+        }
+        p{
+            color: $clr--secondary;
+            font-weight: 600;
+        }
+  }
+
+    

@@ -1,0 +1,21 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+ 
+.menuList{
+   @include centerAll;
+   &__wrapper{
+    @include evenGrid(2, 1fr);
+    justify-items: center;
+    text-align: left;
+   }
+  h2{
+    padding-top: 10rem;
+  }
+
+
+   img{
+    width: 68rem;
+    border-radius: 5%;
+   }
+}
