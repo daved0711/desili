@@ -1,0 +1,45 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.blog {
+  padding-top: 10rem;
+  
+  &__card {
+    img {
+      width: 100rem;
+      border-radius: 2rem;
+      height: 40rem;
+      object-fit: cover;
+    }
+    p {
+      text-align: left;
+      font-size: 1rem;
+      padding-bottom: 2rem;
+    }
+    h4 {
+      text-align: left;
+      font-size: 1.5rem;
+      padding-bottom: 2rem;
+      padding-top: 2rem;
+    }
+  }
+  &__card2 {
+    img {
+      width: 100rem;
+      border-radius: 2rem;
+      height: 40rem;
+      object-fit: cover;
+    }
+    p {
+      text-align: left;
+      font-size: 1rem;
+      padding-bottom: 2rem;
+    }
+    h4 {
+      text-align: left;
+      font-size: 1.5rem;
+      padding-bottom: 2rem;
+      padding-top: 2rem;
+    }
+  }
+}
