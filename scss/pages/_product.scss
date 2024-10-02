@@ -40,8 +40,22 @@
   .product__super2 {
     h4 {
       font-size: 2rem;
-      padding-bottom: 1.5rem;
+      
     }
+         span:after {
+        content: " ";
+        display: inline-block;
+        position: relative;
+        background: $clr--light;
+        color: $clr--light;
+        width: 10rem;
+        left:1rem;
+       
+        border-radius: 1rem;
+        margin-top: 1rem;
+        height: .1rem;
+      } 
+     
   }
   &__tex {
     padding-top: 1.5rem;
@@ -62,8 +76,7 @@
     border-radius: 2rem;
     width: 12rem;
      justify-content: space-between;
-    
-     
+
     
     li {
       text-align: left;
@@ -73,17 +86,6 @@
     }
     
   }
-   span:after {
-        content: " ";
-        display: inline-block;
-        position: relative;
-        background: $clr--light;
-        color: $clr--light;
-        width: 11rem;
-        left: 2rem;
-        bottom: 1rem;
-        border-radius: 1rem;
-        margin-top: 1rem;
-      } 
+  
   
 }

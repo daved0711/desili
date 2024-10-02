@@ -1649,7 +1649,18 @@ img {
 }
 .product .product__super2 h4 {
   font-size: 2rem;
-  padding-bottom: 1.5rem;
+}
+.product .product__super2 span:after {
+  content: " ";
+  display: inline-block;
+  position: relative;
+  background: #fff;
+  color: #fff;
+  width: 10rem;
+  left: 1rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  height: 0.1rem;
 }
 .product__tex {
   padding-top: 1.5rem;
@@ -1674,18 +1685,6 @@ img {
   text-align: left;
   margin: 1rem;
   gap: 3rem;
-}
-.product span:after {
-  content: " ";
-  display: inline-block;
-  position: relative;
-  background: #fff;
-  color: #fff;
-  width: 11rem;
-  left: 2rem;
-  bottom: 1rem;
-  border-radius: 1rem;
-  margin-top: 1rem;
 }
 
 .contact {
