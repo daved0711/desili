@@ -1,0 +1,89 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.contact {
+  @include centerAll;
+  padding-top: 10rem;
+  @include mediaQuery(520px) {
+    padding: 0rem;
+  }
+
+  &__wrappercard {
+    @include mediaQuery(520px) {
+      grid-template-columns: 1fr;
+      padding-top: 7rem;
+    }
+    @include evenGrid(3, 1rem);
+    padding-bottom: 3rem;
+    border-radius: 10%;
+  }
+
+  &--details1 {
+    a {
+      color: $clr--secondary;
+    }
+  }
+  iframe {
+    border-radius: 2%;
+    @include mediaQuery(520px) {
+      display: none;
+    }
+  }
+
+  &__name {
+    @include between;
+  }
+  ul {
+    flex-direction: column;
+  }
+
+  h4 {
+    font-size: 3rem;
+    padding-bottom: 1rem;
+  }
+  form {
+    padding: 2rem;
+    @include mediaQuery(520px) {
+      padding: 0rem;
+    }
+    ul {
+      width: 100%;
+      text-align: left;
+      @include mediaQuery(520px) {
+        width: 100%;
+        padding: 0rem;
+      }
+    }
+  }
+  input {
+    width: 98%;
+    height: 3rem;
+    margin: 0.7rem;
+    background-color: transparent;
+    border: 1px solid $clr--light;
+    border-radius: 0.4rem;
+    @include mediaQuery(520px) {
+      display: flex;
+    }
+  }
+  textarea {
+    @extend input;
+    height: 10rem;
+    margin-bottom: 3rem;
+    border-radius: 1rem;
+  }
+  input::placeholder {
+    font-family: $font--primary;
+    color: $clr--light;
+  }
+  // pag mag iinput puti ang lalabas
+
+  input:focus,
+  input:enabled {
+    color: $clr--light;
+  }
+
+  &__name {
+    @include between;
+  }
+}

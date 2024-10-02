@@ -8,9 +8,14 @@
     @include evenGrid(2, 1fr);
     justify-items: center;
     text-align: left;
+    @include mediaQuery(520px) {
+      grid-template-columns: 1fr;
+    }
+      
+    
    }
   h2{
-    padding-top: 10rem;
+    padding-top: 7rem;
   }
 
 

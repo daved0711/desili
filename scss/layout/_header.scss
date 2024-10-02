@@ -8,13 +8,11 @@
   width: 100%;
   padding: 2rem 0;
   box-shadow: rgba(227, 49, 10, 0.1) 0px 4px 12px;
+  
   &__wrapper {
     @include between;
   }
   &__nav {
-    @include mediaQuery(520px) {
-      display: none;
-    }
     display: flex;
     gap: 2rem;
     li a {
@@ -25,18 +23,58 @@
         color: $clr--secondary;
       }
     }
+
+    @include mediaQuery(520px){
+      position: fixed;
+      top: 0;
+      right: -100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: $clr--primary;
+      width: 100%;
+      height: 100vh;
+      transition: right 0.5s ease;
+      z-index: 98;
+    }
+    &.open{
+      right: 0;
+    }
+  }
+
+  .toggle__menu{
+    display: none;
+    cursor: pointer;
+    z-index: 100;
+
+    span{
+    background-color: $clr--light;
+    width: 1.8rem;
+    height: 0.2rem;
+    display: block;
+    margin: 0.1rem 0;
+    border-radius: 0.1rem;
+    transition: all 0.5s ease;
+    }
+
+    &.open span:first-child{
+      transform: translate(0, 10px) rotate(225deg);
+    }
+    &.open span:nth-child(2){
+      opacity: 0;
+    }
+    &.open span:last-child{
+      transform: translate(0, -13px) rotate(-225deg);
+    }
+
+    @include mediaQuery(520px){
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
   }
   &__logo {
     width: 10rem;
     height: 3rem;
-  }
-
-  .header .toggle__menu span {
-    background-color: $clr--light;
-    width: 3rem;
-    height: 0.6rem;
-    display: block;
-    border: 2px solid $clr--light;
-    border-radius: 1rem;
   }
 }

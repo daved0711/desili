@@ -1,33 +1,89 @@
 @use "../abstract/" as *;
 @use "../base/" as *;
 
-
-.product{
-   @include centerAll;
-   &__wrapper{
-    @include evenGrid(2, 1fr);
+.product {
+  @include centerAll;
+  &__wrapper {
+    @include mediaQuery(520px) {
+      grid-template-columns: 1fr;
+    }
+    @include unevenGrid(2.5fr 1fr, 1fr);
     padding-top: 10rem;
-    padding-bottom: 10rem;
-    
-   }
-   &__super{
-    @include evenGrid(3,1fr);
-   }
-   .product__card{
-     
-   }
-    &__card:hover{
+    @include mediaQuery(520px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__super {
+    @include evenGrid(3, 1fr);
+    @include mediaQuery(520px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__cards2 {
+    padding: 2rem 1rem;
+    text-align: center;
+    border: 2px solid transparent;
+    &:hover {
       border: 2px solid $clr--secondary;
       border-radius: 2rem;
     }
-
-   
+    h4 {
+      font-size: 2rem;
+    }
+    p {
+      color: $clr--secondary;
+      padding-bottom: 2rem;
+    }
     
-   }
-   &__super2{
-    @include evenGrid(1, 1fr);
-   
-   }
+    }
+  
+  .product__super2 {
+    h4 {
+      font-size: 2rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+  &__tex {
+    padding-top: 1.5rem;
+    border-radius: 2rem;
+    width: 12rem;
+    background-color: $clr--dark;
+    height: 5rem;
+    padding-bottom: 3rem;
+    input{
+      background-color: transparent;
+    }
+  }
 
+  &__category {
+    background-color: $clr--dark;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    border-radius: 2rem;
+    width: 12rem;
+     justify-content: space-between;
+    
      
-     
+    
+    li {
+      text-align: left;
+      margin: 1rem;
+       gap: 3rem;
+
+    }
+    
+  }
+   span:after {
+        content: " ";
+        display: inline-block;
+        position: relative;
+        background: $clr--light;
+        color: $clr--light;
+        width: 11rem;
+        left: 2rem;
+        bottom: 1rem;
+        border-radius: 1rem;
+        margin-top: 1rem;
+      } 
+  
+}
